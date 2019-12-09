@@ -30,7 +30,7 @@ public class EnvController {
         this.cfInstanceAddr = cfInstanceAddr;
         this.memoryLimit = memoryLimit;
         this.port = port;
-        this.githubAccessToken = githubAccessToken
+        this.githubAccessToken = githubAccessToken;
 
     }
 
