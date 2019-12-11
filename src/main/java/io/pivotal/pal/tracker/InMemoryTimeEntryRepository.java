@@ -1,5 +1,6 @@
 package io.pivotal.pal.tracker;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@Component
+@ConditionalOnBean(JdbcTimeEntryRepository.class)
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     private HashMap<Long, TimeEntry> entries = new HashMap<>();
